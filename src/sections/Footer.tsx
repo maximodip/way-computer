@@ -116,7 +116,6 @@ export function Footer() {
               src="/logo-removebg-preview.png"
               width={60}
             />
-            <span className="font-semibold">Way Computer</span>
           </div>
           <p className="text-muted-foreground text-sm">
             © {new Date().getFullYear()} Way Computer. Todos los derechos reservados.
