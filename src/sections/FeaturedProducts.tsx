@@ -1,5 +1,6 @@
 import {ChevronRight, ShoppingCart} from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 import {Button} from "@/components/ui/button";
 import {Card, CardContent} from "@/components/ui/card";
@@ -10,48 +11,50 @@ export function FeaturedProducts() {
     <section className="py-16">
       <div className="container mx-auto px-4 md:px-6">
         <div className="mb-10 flex flex-col items-center justify-center text-center">
-          <h2 className="mb-4 text-3xl font-bold tracking-tight">Featured Products</h2>
+          <h2 className="mb-4 text-3xl font-bold tracking-tight">Productos Destacados</h2>
           <p className="text-muted-foreground md:w-2/3">
-            Check out our most popular components and latest arrivals.
+            Descubre nuestros componentes más populares y últimas novedades.
           </p>
         </div>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           <ProductCard
-            image="/placeholder.svg?height=200&width=200"
-            originalPrice={499.99}
-            price={399.99}
+            image="/r9.webp"
+            originalPrice={449999.99}
+            price={359999.99}
             rating={4.9}
             reviews={128}
             title="AMD Ryzen 9 5900X"
           />
           <ProductCard
-            image="/placeholder.svg?height=200&width=200"
-            originalPrice={849.99}
-            price={799.99}
+            image="/rtx.png"
+            originalPrice={764999.99}
+            price={719999.99}
             rating={4.8}
             reviews={96}
             title="NVIDIA RTX 4070 Ti"
           />
           <ProductCard
-            image="/placeholder.svg?height=200&width=200"
-            originalPrice={149.99}
-            price={129.99}
+            image="/980.png"
+            originalPrice={134999.99}
+            price={116999.99}
             rating={4.7}
             reviews={215}
             title="Samsung 980 PRO 1TB SSD"
           />
           <ProductCard
-            image="/placeholder.svg?height=200&width=200"
-            originalPrice={599.99}
-            price={549.99}
+            image="/asus.png"
+            originalPrice={539999.99}
+            price={494999.99}
             rating={4.6}
             reviews={87}
-            title='ASUS ROG Swift 27" Monitor'
+            title='Monitor ASUS ROG Swift 27"'
           />
         </div>
         <div className="mt-8 flex justify-center">
           <Button className="gap-1">
-            View All Products <ChevronRight className="h-4 w-4" />
+            <Link className="flex items-center gap-x-2" href="/shop">
+              Ver Todos los Productos <ChevronRight className="h-4 w-4" />
+            </Link>
           </Button>
         </div>
       </div>
@@ -59,11 +62,29 @@ export function FeaturedProducts() {
   );
 }
 
-function ProductCard({image, title, price, originalPrice, rating, reviews}) {
+interface ProductCardProps {
+  image: string;
+  title: string;
+  price: number;
+  originalPrice?: number;
+  rating: number;
+  reviews: number;
+}
+
+function ProductCard({image, title, price, originalPrice, rating, reviews}: ProductCardProps) {
+  // Función para formatear precios en formato argentino
+  const formatPrice = (price: number) => {
+    return new Intl.NumberFormat("es-AR", {
+      style: "currency",
+      currency: "ARS",
+      maximumFractionDigits: 0,
+    }).format(price);
+  };
+
   return (
     <Card className="group overflow-hidden transition-all duration-200 hover:shadow-lg">
       <div className="bg-muted relative flex h-48 items-center justify-center px-4 pt-4">
-        <Badge className="bg-primary text-primary-foreground absolute top-2 right-2">Sale</Badge>
+        <Badge className="bg-primary text-primary-foreground absolute top-2 right-2">Oferta</Badge>
         <Image
           alt={title}
           className="object-contain transition-transform group-hover:scale-105"
@@ -75,9 +96,11 @@ function ProductCard({image, title, price, originalPrice, rating, reviews}) {
       <CardContent className="p-4">
         <h3 className="truncate font-semibold">{title}</h3>
         <div className="mt-1 flex items-center gap-2">
-          <span className="text-lg font-bold">${price}</span>
+          <span className="text-lg font-bold">{formatPrice(price)}</span>
           {originalPrice && (
-            <span className="text-muted-foreground text-sm line-through">${originalPrice}</span>
+            <span className="text-muted-foreground text-sm line-through">
+              {formatPrice(originalPrice)}
+            </span>
           )}
         </div>
         <div className="mt-2 flex items-center gap-1">
@@ -96,7 +119,9 @@ function ProductCard({image, title, price, originalPrice, rating, reviews}) {
           <span className="text-muted-foreground text-xs">({reviews})</span>
         </div>
         <Button className="mt-3 w-full gap-2">
-          <ShoppingCart className="h-4 w-4" /> Add to Cart
+          <Link className="flex items-center gap-x-2" href="/shop">
+            <ShoppingCart className="h-4 w-4" /> Ver en tienda
+          </Link>
         </Button>
       </CardContent>
     </Card>
