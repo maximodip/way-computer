@@ -9,7 +9,7 @@ export function Hero() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 items-center gap-6 md:grid-cols-2">
           <div className="space-y-4">
-            <Badge className="bg-primary text-primary-foreground">Nuevos Productos</Badge>
+            <Badge className="bg-primary text-primary-foreground">Envíos a todo el país</Badge>
             <h1 className="text-4xl font-bold tracking-tighter md:text-5xl lg:text-6xl">
               Arma la PC de tus sueños
             </h1>

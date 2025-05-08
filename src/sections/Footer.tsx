@@ -7,77 +7,77 @@ export function Footer() {
       <div className="container mx-auto px-4 py-8 md:px-6">
         <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
           <div>
-            <h3 className="mb-4 text-lg font-semibold">Shop</h3>
+            <h3 className="mb-4 text-lg font-semibold">Tienda</h3>
             <ul className="space-y-2">
               <li>
-                <Link className="text-muted-foreground hover:text-foreground text-sm" href="/">
-                  Components
-                </Link>
+                <a className="text-muted-foreground hover:text-foreground text-sm" href="/">
+                  Componentes
+                </a>
               </li>
               <li>
-                <Link className="text-muted-foreground hover:text-foreground text-sm" href="/">
-                  Peripherals
-                </Link>
+                <a className="text-muted-foreground hover:text-foreground text-sm" href="/">
+                  Periféricos
+                </a>
               </li>
               <li>
-                <Link className="text-muted-foreground hover:text-foreground text-sm" href="/">
-                  Networking
-                </Link>
+                <a className="text-muted-foreground hover:text-foreground text-sm" href="/">
+                  Redes
+                </a>
               </li>
               <li>
-                <Link className="text-muted-foreground hover:text-foreground text-sm" href="/">
-                  Accessories
-                </Link>
+                <a className="text-muted-foreground hover:text-foreground text-sm" href="/">
+                  Accesorios
+                </a>
               </li>
             </ul>
           </div>
           <div>
-            <h3 className="mb-4 text-lg font-semibold">Support</h3>
+            <h3 className="mb-4 text-lg font-semibold">Soporte</h3>
             <ul className="space-y-2">
               <li>
-                <Link className="text-muted-foreground hover:text-foreground text-sm" href="/">
-                  Contact Us
-                </Link>
+                <a className="text-muted-foreground hover:text-foreground text-sm" href="/">
+                  Contáctanos
+                </a>
               </li>
               <li>
-                <Link className="text-muted-foreground hover:text-foreground text-sm" href="/">
-                  FAQs
-                </Link>
+                <a className="text-muted-foreground hover:text-foreground text-sm" href="/">
+                  Preguntas Frecuentes
+                </a>
               </li>
               <li>
-                <Link className="text-muted-foreground hover:text-foreground text-sm" href="/">
-                  Shipping
-                </Link>
+                <a className="text-muted-foreground hover:text-foreground text-sm" href="/">
+                  Envíos
+                </a>
               </li>
               <li>
-                <Link className="text-muted-foreground hover:text-foreground text-sm" href="/">
-                  Returns
-                </Link>
+                <a className="text-muted-foreground hover:text-foreground text-sm" href="/">
+                  Devoluciones
+                </a>
               </li>
             </ul>
           </div>
           <div>
-            <h3 className="mb-4 text-lg font-semibold">Company</h3>
+            <h3 className="mb-4 text-lg font-semibold">Empresa</h3>
             <ul className="space-y-2">
               <li>
-                <Link className="text-muted-foreground hover:text-foreground text-sm" href="/">
-                  About Us
-                </Link>
+                <a className="text-muted-foreground hover:text-foreground text-sm" href="/">
+                  Sobre Nosotros
+                </a>
               </li>
               <li>
-                <Link className="text-muted-foreground hover:text-foreground text-sm" href="/">
-                  Careers
-                </Link>
+                <a className="text-muted-foreground hover:text-foreground text-sm" href="/">
+                  Empleo
+                </a>
               </li>
               <li>
-                <Link className="text-muted-foreground hover:text-foreground text-sm" href="/">
+                <a className="text-muted-foreground hover:text-foreground text-sm" href="/">
                   Blog
-                </Link>
+                </a>
               </li>
               <li>
-                <Link className="text-muted-foreground hover:text-foreground text-sm" href="/">
-                  Press
-                </Link>
+                <a className="text-muted-foreground hover:text-foreground text-sm" href="/">
+                  Prensa
+                </a>
               </li>
             </ul>
           </div>
@@ -85,24 +85,24 @@ export function Footer() {
             <h3 className="mb-4 text-lg font-semibold">Legal</h3>
             <ul className="space-y-2">
               <li>
-                <Link className="text-muted-foreground hover:text-foreground text-sm" href="/">
-                  Terms of Service
-                </Link>
+                <a className="text-muted-foreground hover:text-foreground text-sm" href="/">
+                  Términos de Servicio
+                </a>
               </li>
               <li>
-                <Link className="text-muted-foreground hover:text-foreground text-sm" href="/">
-                  Privacy Policy
-                </Link>
+                <a className="text-muted-foreground hover:text-foreground text-sm" href="/">
+                  Política de Privacidad
+                </a>
               </li>
               <li>
-                <Link className="text-muted-foreground hover:text-foreground text-sm" href="/">
-                  Cookie Policy
-                </Link>
+                <a className="text-muted-foreground hover:text-foreground text-sm" href="/">
+                  Política de Cookies
+                </a>
               </li>
               <li>
-                <Link className="text-muted-foreground hover:text-foreground text-sm" href="/">
-                  Warranty
-                </Link>
+                <a className="text-muted-foreground hover:text-foreground text-sm" href="/">
+                  Garantía
+                </a>
               </li>
             </ul>
           </div>
@@ -116,6 +116,7 @@ export function Footer() {
               src="/logo-removebg-preview.png"
               width={60}
             />
+            <span className="font-semibold">Way Computer</span>
           </div>
           <p className="text-muted-foreground text-sm">
             © {new Date().getFullYear()} Way Computer. Todos los derechos reservados.

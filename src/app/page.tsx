@@ -9,9 +9,9 @@ export default function Home() {
     <div className="flex min-h-screen flex-col">
       <main className="flex-1">
         <Hero />
-        <Categories />
-        <FeaturedProducts />
         <ChooseUs />
+        <FeaturedProducts />
+        <Categories />
         <Map />
       </main>
     </div>

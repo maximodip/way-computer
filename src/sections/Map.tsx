@@ -23,16 +23,16 @@ export default function Map() {
 
   return (
     <section className="container mx-auto px-4 py-16 md:px-6">
-      <div className="flex items-center gap-x-4">
+      <div className="flex items-center max-md:flex-col max-md:gap-y-4 md:gap-x-4">
         <GoogleMap center={center} mapContainerStyle={containerStyle} zoom={15}>
           <Marker position={center} />
         </GoogleMap>
-        <div className="text-xl font-semibold">
+        <div className="text-xl font-semibold max-md:text-center">
           <p>WayComputer SRL -</p>
           <p>Direccion: Florida 537 1er Piso local 436. CABA. Buenos Aires, Argentina.</p>
           <p>Telefono: 4328-5865</p>
           <p>Mail: waycomputer@hotmail.com</p>
-          <div className="flex items-center gap-x-2 pt-4">
+          <div className="flex items-center gap-x-2 pt-4 max-md:justify-center">
             <a href="https://www.facebook.com/waycomputer" rel="noreferrer" target="_blank">
               <Facebook />
             </a>

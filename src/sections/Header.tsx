@@ -28,32 +28,31 @@ export function Header() {
           {/* <span className="text-xl font-bold">Way Computer</span> */}
         </div>
         {isShopPage && (
-          <div className="flex items-center gap-4">
+          <>
             <input
-              className="justify-center rounded border px-2 py-1"
+              className="w-full justify-center rounded border px-2 py-1"
               placeholder="Buscar productos..."
               type="text"
             />
-            <Link
-              className="flex items-center gap-x-2 rounded px-4 py-2 duration-100 hover:bg-gray-500"
-              href="/login"
-            >
-              <User className="h-5 w-5" />
-              Ingresá
-            </Link>
-            <Button ref={null} className="cursor-pointer" size="icon" variant="ghost">
-              <ShoppingCart className="h-5 w-5" />
-            </Button>
-          </div>
+            <div className="flex items-center gap-4">
+              <Link
+                className="flex items-center gap-x-2 rounded px-4 py-2 duration-100 hover:bg-gray-500"
+                href="/login"
+              >
+                <User className="h-5 w-5" />
+                Ingresá
+              </Link>
+              <Button ref={null} className="cursor-pointer" size="icon" variant="ghost">
+                <ShoppingCart className="h-5 w-5" />
+              </Button>
+            </div>
+          </>
         )}
         {!isShopPage && (
           <>
             <nav className="hidden items-center gap-6 md:flex">
               <Link className="hover:text-primary text-sm font-medium text-white/85" href="/">
                 Principal
-              </Link>
-              <Link className="hover:text-primary text-sm font-medium text-white/85" href="/">
-                Categorias
               </Link>
               <Link className="hover:text-primary text-sm font-medium text-white/85" href="/">
                 Presupuestos

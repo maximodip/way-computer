@@ -1,4 +1,5 @@
 import {Award, Clock, Wrench} from "lucide-react";
+import {ReactNode} from "react";
 
 import {Card, CardContent} from "@/components/ui/card";
 
@@ -7,26 +8,27 @@ export function ChooseUs() {
     <section className="bg-muted py-16">
       <div className="container mx-auto px-4 md:px-6">
         <div className="mb-10 flex flex-col items-center justify-center text-center">
-          <h2 className="mb-4 text-3xl font-bold tracking-tight">Why Choose Way Computer</h2>
+          <h2 className="mb-4 text-3xl font-bold tracking-tight">Por qué elegir Way Computer</h2>
           <p className="text-muted-foreground md:w-2/3">
-            We are committed to providing the best PC components with exceptional service.
+            Nos comprometemos a proporcionar los mejores componentes de PC con un servicio
+            excepcional.
           </p>
         </div>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
           <FeatureCard
-            description="All our products are genuine with manufacturer warranty and quality assurance."
+            description="Todos nuestros productos son genuinos con garantía del fabricante y garantía de calidad."
             icon={<Award className="text-primary h-10 w-10" />}
-            title="Quality Guaranteed"
+            title="Calidad Garantizada"
           />
           <FeatureCard
             description="Servicio técnico/mantenimiento para todo tipo de pc."
             icon={<Wrench className="text-primary h-10 w-10" />}
-            title="Servicio tecnico"
+            title="Servicio Técnico"
           />
           <FeatureCard
-            description="Our team of tech experts is available 7 days Link week to help with any questions."
+            description="Nuestro equipo de expertos en tecnología está disponible los 7 días de la semana para ayudarle con cualquier pregunta."
             icon={<Clock className="text-primary h-10 w-10" />}
-            title="Expert Support"
+            title="Soporte Experto"
           />
         </div>
       </div>
@@ -34,7 +36,13 @@ export function ChooseUs() {
   );
 }
 
-function FeatureCard({icon, title, description}) {
+interface FeatureCardProps {
+  icon: ReactNode;
+  title: string;
+  description: string;
+}
+
+function FeatureCard({icon, title, description}: FeatureCardProps) {
   return (
     <Card>
       <CardContent className="p-6 text-center">
